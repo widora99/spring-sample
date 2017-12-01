@@ -31,14 +31,14 @@
 		<property name="persistenceUnitName" value="samplePersistenceUnit" />
 		<property name="packagesToScan">
 			<list>
-				<value>com.sample.entity</value>
+				<value>com.sample.entity.*</value>
 			</list>
 		</property>
 
 		<property name="jpaProperties">
 			<props>
 				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
-				<!-- <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop> -->
+<!-- 				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop> -->
 				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
 				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
 			</props>
@@ -83,28 +83,10 @@
 
 
 	<!-- Make this available across all of Spring MVC -->
-	<mvc:annotation-driven
-		content-negotiation-manager="contentNegotiationManager">
+	<mvc:annotation-driven />
 
-		<!-- request -->
-		<!-- <mvc:message-converters> -->
-		<!-- <bean -->
-		<!-- class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" 
-			/> -->
-		<!-- <bean class="org.springframework.http.converter.StringHttpMessageConverter" 
-			/> -->
-		<!-- <bean class="org.springframework.http.converter.FormHttpMessageConverter" 
-			/> -->
-		<!-- <bean -->
-		<!-- class="org.springframework.http.converter.ByteArrayHttpMessageConverter" 
-			/> -->
-		<!-- <bean -->
-		<!-- class="org.springframework.http.converter.ResourceHttpMessageConverter" 
-			/> -->
-		<!-- </mvc:message-converters> -->
-	</mvc:annotation-driven>
 
-	<context:component-scan base-package="com.toyota_cs" />
+	<context:component-scan base-package="com.sample.*" />
 
 	<!-- web request interceptor -->
 	<!--

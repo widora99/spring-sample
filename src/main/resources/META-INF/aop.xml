@@ -4,7 +4,7 @@
 	<weaver>
 
 		<!-- only weave classes in our application-specific packages -->
-		<include within="com.toyota_cs.radget.project.domain.*" />
+		<include within="com.sample.entity.*" />
 
 	</weaver>
 

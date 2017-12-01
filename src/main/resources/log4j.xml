@@ -117,12 +117,12 @@
 
 	<logger name="org.springframework">
 		<level value="DEBUG" />
-		<appender-ref ref="validateLogAppender" />
+		<appender-ref ref="SampleAppender" />
 	</logger>
 
 	<logger name="SampleLogging">
 		<level value="INFO" />
-		<appender-ref ref="sampleAppender" />
+		<appender-ref ref="SampleAppender" />
 	</logger>
 	
 	<root>
