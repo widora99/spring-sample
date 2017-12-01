@@ -9,8 +9,8 @@
 		<meta name="description" content="<tiles:insertAttribute name="pageDescription" ignore="true"/>">		
 		<tiles:insertAttribute name="css" />
 		<tiles:insertAttribute name="custom_css" />
-		<link rel="icon" href="<c:url value="/img/radget.ico"/>" type="image/vnd.microsoft.icon" />
-		<link rel="shortcut icon" href="<c:url value="/img/radget.ico"/>" type="image/vnd.microsoft.icon" />
+		<link rel="icon" href="<c:url value="/img/sampleradget.ico"/>" type="image/vnd.microsoft.icon" />
+		<link rel="shortcut icon" href="<c:url value="/img/sample.ico"/>" type="image/vnd.microsoft.icon" />
 		<meta charset="utf-8">
 		<meta property="og:image" content="<tiles:insertAttribute name="og_image" ignore="true"/>" />
 		<meta property="og:title" content="<tiles:insertAttribute name="og_title" ignore="true"/>" />

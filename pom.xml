@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.toyota-cs</groupId>
-	<artifactId>Spring-Sample</artifactId>
+	<groupId>sample</groupId>
+	<artifactId>sample</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>Spring sample </name>
-	<url>https://192.168.50.186/TCS-FS/Radget</url>
+	<name>sample</name>
+	<url>https://sample.com</url>
 
 
 	<properties>
@@ -18,71 +18,21 @@
 		<spring-test-dbunit.version>1.2.1</spring-test-dbunit.version>
 		<hibernate.properties>system.properties</hibernate.properties>
 		<hibernate.maven.plugin.version>3.6.10.Final</hibernate.maven.plugin.version>
-		<hibernate.hbm2ddl.sqlfile>radget_ddl.sql</hibernate.hbm2ddl.sqlfile>
+		<hibernate.hbm2ddl.sqlfile>sample_ddl.sql</hibernate.hbm2ddl.sqlfile>
 		<aspectjweaver>${settings.localRepository}/org/springframework/spring-instrument/4.2.2.RELEASE/spring-instrument-4.2.2.RELEASE.jar</aspectjweaver>
-		<build.number>${env.BUILD_NUMBER}</build.number>
 	</properties>
 
-
-	<distributionManagement>
-		<repository>
-			<id>internal</id>
-			<url>http://192.168.50.99:8088/repository/internal/</url>
-		</repository>
-		<site>
-			<id>radgetDoc</id>
-			<url>file:///C:/Program Files/tomcat/apache-tomcat-8.5.9/webapps/doc</url>
-		</site>
-	</distributionManagement>
-
 	<repositories>
-		<repository>
-			<id>central</id>
-			<url>http://192.168.50.99:8088/repository/internal/</url>
-			<layout>default</layout>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-		</repository>
-		<repository>
-			<id>internal</id>
-			<name>Archiva Managed Internal Repository</name>
-			<url>http://192.168.50.99:8088/repository/internal/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
+	    <repository>
+	      <id>central</id>
+	      <name>Maven Repository Switchboard</name>
+	      <layout>default</layout>
+	      <url>http://repo1.maven.org/maven2</url>
+	      <snapshots>
+	        <enabled>false</enabled>
+	      </snapshots>
+	    </repository>
 	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>central</id>
-			<url>http://192.168.50.99:8088/repository/internal/</url>
-			<layout>default</layout>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-		</pluginRepository>
-		<pluginRepository>
-			<id>internal</id>
-			<name>Archiva Managed Internal Repository</name>
-			<url>http://192.168.50.99:8088/repository/internal/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<dependencies>
 		<dependency>
@@ -353,18 +303,6 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>3.0.4</version>
-				<configuration>
-					<encoding>UTF-8</encoding>
-					<xmlOutput>true</xmlOutput>
-					<!-- Optional directory to put findbugs xdoc xml report -->
-					<xmlOutputDirectory>target/site</xmlOutputDirectory>
-				</configuration>
-			</plugin>
 		</plugins>
 	</reporting>
 	<build>
@@ -389,16 +327,6 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>javancss-maven-plugin</artifactId>
-				<version>2.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
 
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
@@ -407,9 +335,9 @@
 				<configuration>
 					<url>http://localhost:8080/manager/text</url>
 					<server>integration environment</server>
-					<username>devadm</username>
-					<password>P@ss1234</password>
-					<path>/Radget</path>
+					<username>sample</username>
+					<password>password</password>
+					<path>/sample</path>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -547,7 +475,6 @@
 	                    <manifestEntries>
 	                        <Specification-Title>${project.name}</Specification-Title>
 	                        <Specification-Version>${project.version}</Specification-Version>
-	                        <Implementation-Version>${build.number}</Implementation-Version>
 	                    </manifestEntries>
 	                </archive>
 	            </configuration>

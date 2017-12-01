@@ -88,6 +88,7 @@
 
 	<context:component-scan base-package="com.sample.*" />
 
+
 	<!-- web request interceptor -->
 	<!--
 	<mvc:interceptors>

@@ -6,11 +6,11 @@
 		<!-- only weave classes in our application-specific packages -->
 		<include within="com.sample.entity.*" />
 
+
 	</weaver>
 
 	<aspects>
-		<!-- weave in just this aspect -->
-<!-- 		<aspect name="com.toyota_cs.radget." /> -->
+
 	</aspects>
 
 </aspectj>
