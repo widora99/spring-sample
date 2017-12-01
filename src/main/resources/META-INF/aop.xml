@@ -4,13 +4,12 @@
 	<weaver>
 
 		<!-- only weave classes in our application-specific packages -->
-		<include within="com.toyota_cs.radget.project.domain.*" />
+		<include within="com.sample.project.domain.*" />
 
 	</weaver>
 
 	<aspects>
-		<!-- weave in just this aspect -->
-<!-- 		<aspect name="com.toyota_cs.radget." /> -->
+
 	</aspects>
 
 </aspectj>

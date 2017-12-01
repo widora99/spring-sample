@@ -7,7 +7,7 @@
 		<!--  <link rel="shortcut icon" href="img/sample.ico" type="image/vnd.microsoft.icon" />-->
 		<link rel="stylesheet" media="screen" href="css/lib/bootstrap.css">
 		<link rel="stylesheet" media="screen" href="css/index.css">
-		<script src='/Radget/js/lib/jquery.js'></script>
+		<script src='/Sample/js/lib/jquery.js'></script>
 		<script src='js/index.js'></script>
 	</head>
 	<body>
