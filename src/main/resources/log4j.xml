@@ -3,7 +3,7 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
 	<!-- <appender name="FILE" class="org.apache.log4j.RollingFileAppender"> -->
-	<!-- <param name="File" value="C:/log/example.log" /> -->
+	<!-- <param name="File" value="/log/example.log" /> -->
 	<!-- <param name="Append" value="true" /> -->
 	<!-- <param name="MaxFileSize" value="1MB" /> -->
 	<!-- <param name="MaxBackupIndex" value="10" /> -->
@@ -13,7 +13,7 @@
 	<!-- </appender> -->
 
 	<!-- <appender name="HTML_FILE" class="org.apache.log4j.RollingFileAppender"> -->
-	<!-- <param name="File" value="C:/log/example.html" /> -->
+	<!-- <param name="File" value="/log/example.html" /> -->
 	<!-- <param name="Append" value="true" /> -->
 	<!-- <param name="MaxFileSize" value="1MB"/> -->
 	<!-- <param name="MaxBackupIndex" value="10"/> -->
@@ -77,7 +77,7 @@
 	<!-- </appender> -->
 
 	<!-- <appender name="FOR_LOG4J_PERFORMANCE" class="org.apache.log4j.FileAppender"> -->
-	<!-- <param name="File" value="C:/log/log4j.log" /> -->
+	<!-- <param name="File" value="/log/log4j.log" /> -->
 	<!-- <param name="Append" value="true" /> -->
 	<!-- <layout class="org.apache.log4j.PatternLayout"> -->
 	<!-- <param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss} %c %p: 
@@ -98,7 +98,7 @@
 	</appender>
 
 	<!-- <appender name="FILE" class="org.apache.log4j.RollingFileAppender"> -->
-	<!-- <param name="File" value="C:/log/example.log" /> -->
+	<!-- <param name="File" value="/log/example.log" /> -->
 	<!-- <param name="Append" value="true" /> -->
 	<!-- <param name="MaxFileSize" value="1MB"/> -->
 	<!-- <param name="MaxBackupIndex" value="10"/> -->
@@ -108,7 +108,7 @@
 	<!-- </appender> -->
 
 	<appender name="SampleAppender" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="C:/temp/sample.log" />
+		<param name="File" value="User/tcs/temp/sample.log" />
 		<param name="Append" value="true" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%d{yyyy/MM/dd},%d{HH:mm:ss.SSS},%p,%c,%m%n" />

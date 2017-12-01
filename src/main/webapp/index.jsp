@@ -11,6 +11,10 @@
 		<script src='js/index.js'></script>
 	</head>
 	<body>
-
+		<div id="loginarea">
+			<div>ログイン</div>
+			<div><span class="login_label">ID</span><input id="userid" type="text"></div>
+			<div><span class="login_label">パスワード</span><input id="password" type="password"></div>
+		</div>
 	</body>
 </html>
